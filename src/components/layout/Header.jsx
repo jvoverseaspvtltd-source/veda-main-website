@@ -79,7 +79,7 @@ const Header = () => {
                         ))}
                         <div className="flex items-center gap-3">
                             <a
-                                href="https://crm.vedaloans.com"
+                                href="https://crm.vedaloansandfinance.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={`px-5 py-2.5 rounded-xl text-sm font-bold border transition-all transform hover:scale-105 active:scale-95 ${
@@ -180,7 +180,7 @@ const Header = () => {
                         {/* Footer in menu */}
                         <div className="p-6 sm:p-8 border-t border-white/5 flex flex-col gap-4">
                             <a
-                                href="https://crm.vedaloans.com"
+                                href="https://crm.vedaloansandfinance.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block w-full bg-transparent border border-white/30 text-white text-center py-4 sm:py-6 rounded-2xl sm:rounded-3xl font-black uppercase tracking-[0.2em] text-xs sm:text-sm active:scale-[0.98] transition-all hover:bg-white/5"

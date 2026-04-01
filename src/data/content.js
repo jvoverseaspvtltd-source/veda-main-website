@@ -6,7 +6,7 @@ export const companyInfo = {
     vision: "To become a reliable and leading loan distribution partner across India, known for integrity and efficiency.",
     address: "Medara Bazar, Opp. Ravi Parcel, Kalamandir Center, Chilakaluripet – 522616, Palnadu District, Andhra Pradesh, India",
     phone: "+91 8712275590",
-    email: "info@vedaloans.com",
+    email: "info@vedaloansandfinance.com",
 };
 
 export const loanProducts = [

@@ -63,7 +63,7 @@ const Header = () => {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden lg:flex items-center gap-8">
+                    <nav className="hidden lg:flex items-center gap-6">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -77,12 +77,26 @@ const Header = () => {
                                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? "w-full" : "w-0"}`}></span>
                             </Link>
                         ))}
-                        <Link
-                            to="/apply"
-                            className="bg-gradient-accent hover:shadow-lg hover:shadow-accent/30 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all transform hover:scale-105 active:scale-95"
-                        >
-                            Get Started
-                        </Link>
+                        <div className="flex items-center gap-3">
+                            <a
+                                href="https://crm.vedaloans.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`px-5 py-2.5 rounded-xl text-sm font-bold border transition-all transform hover:scale-105 active:scale-95 ${
+                                    scrolled 
+                                    ? "border-primary/20 text-primary-dark hover:bg-primary/5" 
+                                    : "border-white/30 text-white hover:bg-white/10"
+                                }`}
+                            >
+                                Login
+                            </a>
+                            <Link
+                                to="/apply"
+                                className="bg-gradient-accent hover:shadow-lg hover:shadow-accent/30 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all transform hover:scale-105 active:scale-95"
+                            >
+                                Get Started
+                            </Link>
+                        </div>
                     </nav>
 
                     {/* Mobile Toggle */}
@@ -164,7 +178,15 @@ const Header = () => {
                         </div>
 
                         {/* Footer in menu */}
-                        <div className="p-6 sm:p-8 border-t border-white/5">
+                        <div className="p-6 sm:p-8 border-t border-white/5 flex flex-col gap-4">
+                            <a
+                                href="https://crm.vedaloans.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full bg-transparent border border-white/30 text-white text-center py-4 sm:py-6 rounded-2xl sm:rounded-3xl font-black uppercase tracking-[0.2em] text-xs sm:text-sm active:scale-[0.98] transition-all hover:bg-white/5"
+                            >
+                                CRM Login
+                            </a>
                             <Link
                                 to="/apply"
                                 onClick={() => setIsOpen(false)}
@@ -172,7 +194,7 @@ const Header = () => {
                             >
                                 Get Started Now
                             </Link>
-                            <p className="mt-8 text-center text-white/20 text-[10px] font-bold uppercase tracking-[0.3em]">
+                            <p className="mt-4 text-center text-white/20 text-[10px] font-bold uppercase tracking-[0.3em]">
                                 Veda Loans and Finance • Precision Facilitation
                             </p>
                         </div>

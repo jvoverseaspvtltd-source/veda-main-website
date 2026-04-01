@@ -27,8 +27,7 @@ import {
     IconButton,
     Stack,
     Checkbox,
-    Link as MuiLink,
-    Chip
+    Link as MuiLink
 } from '@mui/material';
 import {
     User,

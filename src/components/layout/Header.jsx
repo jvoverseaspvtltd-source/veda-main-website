@@ -119,7 +119,7 @@ const Header = () => {
                         <div className="flex justify-between items-center p-6 border-b border-white/5">
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center p-1.5 shadow-xl">
-                                    <img src="/logo-bgremove.png" alt="Logo" className="w-full h-full object-contain" />
+                                    <img src="/logo-bgremove.png" alt="Veda Loans Logo" className="w-full h-full object-contain" />
                                 </div>
                                 <span className="text-white font-black text-lg tracking-tight">Veda <span className="text-secondary">Loans and Finance</span></span>
                             </div>

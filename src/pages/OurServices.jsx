@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -17,6 +18,11 @@ import { services } from "../data/content";
 const OurServices = () => {
     return (
         <div className="flex flex-col bg-surface overflow-hidden">
+            <Helmet>
+                <title>Our Services | Veda Loans and Finance – Loan Coordination & DSA Support</title>
+                <meta name="description" content="Professional loan distribution services, lead verification, and dedicated support for our DSA partner network across India." />
+                <link rel="canonical" href="https://www.vedaloansandfinance.com/services" />
+            </Helmet>
             {/* Immersive Header */}
             <section className="bg-gradient-banking pt-32 pb-28 md:pb-40 relative overflow-hidden">
                 <div className="absolute bottom-0 left-0 w-full h-8 bg-surface/50 opacity-20 backdrop-blur-sm"></div>

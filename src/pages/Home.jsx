@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -11,11 +12,51 @@ import {
     Network,
     Briefcase
 } from "lucide-react";
-import { services, loanProducts } from "../data/content";
+import { services, loanProducts, companyInfo } from "../data/content";
 
 const Home = () => {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "Veda Loans and Finance",
+        "alternateName": "Veda Loans",
+        "url": "https://www.vedaloansandfinance.com",
+        "logo": "https://www.vedaloansandfinance.com/veda-logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8712275590",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["en", "telugu", "hindi"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Medara Bazar, Opp. Ravi Parcel, Kalamandir Center",
+            "addressLocality": "Chilakaluripet",
+            "postalCode": "522616",
+            "addressRegion": "Andhra Pradesh",
+            "addressCountry": "IN"
+        },
+        "description": "Professional loan coordination and distribution services. Bridging the gap between customers, DSA partners, and lending institutions for Personal, Business, Home, and SME loans.",
+        "sameAs": [
+            "https://www.facebook.com/vedaloans",
+            "https://www.instagram.com/vedaloans"
+        ]
+    };
+
     return (
         <div className="flex flex-col bg-surface overflow-hidden">
+            <Helmet>
+                <title>Veda Loans and Finance – Your Trusted DSA Loan Partner in India</title>
+                <meta name="description" content="Veda Loans and Finance offers professional loan coordination for Personal, Business, and Home loans. Join our growing DSA network in Andhra Pradesh and India." />
+                <link rel="canonical" href="https://www.vedaloansandfinance.com/" />
+                <meta name="keywords" content="Veda Loans, Loan DSA Partner, Personal Loan Chilakaluripet, Business Loan Andhra Pradesh, Home Loan DSA, SME Finance India" />
+                
+                {/* Structured Data */}
+                <script type="application/ld+json">
+                    {JSON.stringify(jsonLd)}
+                </script>
+            </Helmet>
             {/* Elite Hero Section */}
             <section className="relative min-h-[90vh] flex items-center pt-20 pb-16 md:pt-26 md:pb-22 bg-gradient-banking">
                 <div className="absolute inset-0 z-0 opacity-20">

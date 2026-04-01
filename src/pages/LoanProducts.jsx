@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import * as Icons from "lucide-react";
@@ -6,6 +7,11 @@ import { loanProducts } from "../data/content";
 const LoanProducts = () => {
     return (
         <div className="flex flex-col bg-surface overflow-hidden">
+            <Helmet>
+                <title>Loan Products | Veda Loans and Finance – Personal, Business & Home Loans</title>
+                <meta name="description" content="Explore our range of loan products including Personal, Business, Home, and SME loans. Coordinated through India's top banks with zero upfront fees." />
+                <link rel="canonical" href="https://www.vedaloansandfinance.com/products" />
+            </Helmet>
             {/* Immersive Header */}
             <section className="bg-gradient-banking pt-32 pb-28 md:pb-40 relative overflow-hidden">
                 <div className="absolute bottom-0 left-0 w-full h-8 bg-surface/50 opacity-20 backdrop-blur-sm"></div>

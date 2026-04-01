@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -15,6 +16,12 @@ import {
 const BecomeDSA = () => {
     return (
         <div className="flex flex-col bg-surface overflow-hidden">
+            <Helmet>
+                <title>Become a DSA Partner | Veda Loans and Finance – Join Our Network</title>
+                <meta name="description" content="Join India's most transparent loan coordination network. Scale your consultancy as a Veda DSA partner with 30+ banking institutions." />
+                <link rel="canonical" href="https://www.vedaloansandfinance.com/become-dsa" />
+                <meta name="keywords" content="Apply for Loan DSA, Bank DSA Registration, Loan Partner Program, Veda Loans Partnership" />
+            </Helmet>
             {/* Immersive Header */}
             <section className="bg-gradient-banking pt-20 pb-24 md:pt-32 md:pb-40 relative overflow-hidden">
                 <div className="absolute bottom-0 left-0 w-full h-8 bg-surface/50 opacity-20 backdrop-blur-sm"></div>
